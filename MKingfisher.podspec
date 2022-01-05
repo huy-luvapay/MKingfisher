@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKingfisher'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'A short description of MKingfisher.'
 
 # This description is used to generate tags and improve search results.
@@ -21,16 +21,30 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/phuhuy2016/MKingfisher'
+  s.homepage         = 'https://github.com/huy-luvapay'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'phuhuy2016' => 'huy.van@epapersmart.com' }
-  s.source           = { :git => 'https://github.com/phuhuy2016/MKingfisher.git', :tag => s.version.to_s }
+  s.author           = { 'HuyVan' => 'huy.van@epapersmart.com' }
+  s.source           = { :git => 'https://github.com/huy-luvapay/MKingfisher.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
+  
+  s.swift_version = '5.0'
 
-  s.source_files = 'MKingfisher/Classes/**/*'
+  s.source_files = 'MKingfisher/Classes/**/*.{h,m,mm,swift}'
+  
+  s.requires_arc = true
+  #s.resources = ['MKingfisher/Classes/**/*.xib', "MKingfisher/Assets/**/*.xib", "MKingfisher/Assets/**/*.storyboard", "MKingfisher/Assets/**/*.xcassets", "MKingfisher/Assets/**/*.png", "MKingfisher/Assets/**/*.jpg", "MKingfisher/Assets/**/*.bundle", "MKingfisher/Assets/**/*.ttf", "MKingfisher/Assets/**/*.plist", "MKingfisher/Assets/**/*.strings", "MKingfisher/Assets/**/*.lproj", "MKingfisher/Assets/**/*.png", "MKingfisher/Resources/**/*.storyboard"]
+  #
+  
+  #Pod
+  #s.resource_bundle = { 'MKingfisher' => 'MKingfisher/Resources/**/*.storyboard' }
+  #s.resource_bundle = { 'MKingfisher' => 'MKingfisher/Assets/**/*.storyboard' }
+  #s.static_framework = true
+
+  
+  # s.frameworks = 'UIKit', 'MapKit'
   
   # s.resource_bundles = {
   #   'MKingfisher' => ['MKingfisher/Assets/*.png']
@@ -39,4 +53,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
