@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "summary": "A short description of MKingfisher.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://bitbucket.org/iosteam-epaper/",
+  "homepage": "https://github.com/huy-luvapay",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "HuyVan": "huy.van@epapersmart.com"
   },
   "source": {
-    "git": "https://phuhuy2016@bitbucket.org/iosteam-epaper/MKingfisher.git",
+    "git": "https://github.com/huy-luvapay/MKingfisher.git",
     "tag": "0.0.1"
   },
   "platforms": {
